@@ -1,0 +1,171 @@
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Lato:wght@400;700;900&family=Montserrat:wght@400;500;900&family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,500&family=Roboto:wght@300;400;700;900&display=swap');
+
+
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+
+  }
+
+
+  /* Custom properties  */
+  :root {
+      --main-font: 'Roboto', sans-serif;
+      --secondary-font: 'Montserrat', sans-serif;
+      --third-font: 'Kanit', sans-serif;
+
+
+  }
+
+
+  .container_title {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      /* border: 3px solid red; */
+      /* padding: 1rem;  */
+      font-family: var(--main-font);
+      font-weight: 700;
+      font-size: 20px;
+  }
+
+  .form_container {
+      display: flex;
+      border: 3px solid red;
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      padding: 1rem;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+  }
+
+  .formClass {
+      display: flex;
+      flex-direction: column;
+      border: 3px dotted blueviolet;
+      width: 50%;
+      height: 50%;
+      padding: 2rem;
+      position: relative;
+  }
+
+  .container_title_title {
+      color: red;
+      /* border: 3px solid black; */
+      justify-content: center;
+      align-self: center;
+      padding: 1.5rem;
+      font-size: 24px;
+  }
+
+  /* estilos de form */
+
+  .form_container_send {
+      font: var(--main-font);
+      font-weight: 400;
+      font-size: 30px;
+      margin-top: 1rem;
+      background-color: #3360A3;
+      border-radius: 1rem;
+      padding: 1rem;
+      width: 20%;
+      align-self: center;
+      border: none;
+
+      color: white;
+      cursor: pointer;
+      transition: all 1s;
+  }
+
+  .form_container_send:hover {
+      transform: scale(1.04);
+      text-shadow: -1px 2px 5px rgba(255, 255, 255, 1);
+      letter-spacing: 3px;
+      transition: all 1s;
+
+  }
+
+
+
+  /* Styles of inputs */
+
+  .form_container_input_password,
+  .form_container_input_usuario {
+
+      border: none;
+      background-color: transparent;
+      outline: none;
+      border-radius: 10px;
+      padding: 1.5rem;
+      font-size: 1.2rem;
+      height: 2rem;
+      transition: all ease-in .9s;
+
+  }
+
+  .formClass_containerUser,
+  .formClass_containerPass {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-bottom: 1rem;
+      /* border: 2px solid black; */
+  }
+
+  .form_container_label_Usuario,
+  .form_container_label_Pass {
+      position: absolute;
+      top: 25%;
+      left: 9%;
+      font-size: 20px;
+      letter-spacing: 1px;
+      font-family: var(--third-font);
+      font-weight: 500;
+      transition: all .5s ease-in-out;
+    
+  }
+
+  .formClass_containerUser::after,
+  .formClass_containerPass::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: 3px;
+      background-color: red;
+      transition: all .5 ease;
+      width: 0;
+  }
+  
+/* Animacion de linea */
+  .formClass_containerUser:focus-within::after {
+      background-color: green;
+      width: 100%;
+      transition: width .5s ease-in-out;
+
+  }
+
+  .formClass_containerPass:focus-within::after {
+      background-color: green;
+      width: 100%;
+      transition: width .5s ease-in-out;
+
+  }
+
+  /*  */
+
+  .formClass_containerUser:focus-within .form_container_label_Usuario{
+    position: absolute;
+    top: 15%;
+    transform: scale(.7) translateX(-40%) translateY(-80%);
+    transition: all .5s ease-in-out;
+  }
+
+  .formClass_containerUser:focus-within .form_container_label_Usuario{
+    position: absolute;
+    top: 15%;
+    transform: scale(.7) translateX(-40%) translateY(-80%);
+    transition: all .5s ease-in-out;
+  }
